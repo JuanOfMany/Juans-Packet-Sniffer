@@ -1,0 +1,20 @@
+grid * {
+    color: #000000;
+    font: 20px "Comic Sans";
+  } 
+
+/* grid {
+    background-color: pink;
+} */
+
+frame {
+    margin: 20px;
+    padding: 10px;
+    border-style: hidden;
+}
+
+/* border {
+    border-style: groove;
+    border-color: black;
+} */
+
