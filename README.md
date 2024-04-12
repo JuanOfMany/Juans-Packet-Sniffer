@@ -16,4 +16,8 @@ The packet data presented includes:
 * Checksum value
 * Time to Live
 
-There is a bit more information within the packet and its header that is accessible in the code, but I've decided not to include the payload data because it is unreadable without decryption, and the header length because it does not provide useful information.
+There is a bit more information within the packet and its header that is accessible in the code, but I've decided not to include the payload data because it is unreadable without decryption, and the header length because it does not provide useful information. I've left printouts commented out in case during further development I choose to expand the scope of the details provided.
+
+I used the gtk toolkit to create a simple GUI in C to display this data because it is a free/open source project that met my needs. I have previously made web-apps before and wanted to create a project that isn't another CRUD app.
+I used the libpcap library to leverage the pcap interface in order to capture packets and extract their details.
+I also used Github Copilot to help debug linker and PATH issues, explain unfamiliar shell commands and library functionality, and even to fill in repetitive boilerplate logic. 
