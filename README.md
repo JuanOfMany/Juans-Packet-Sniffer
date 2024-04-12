@@ -1,7 +1,8 @@
 # Juans-Packet-Sniffer
 My final project for CS50: a packet sniffer with a GUI coded in C.
 
-![image](https://github.com/JuanOfMany/Juans-Packet-Sniffer/assets/101835485/a5ae300a-25ac-4047-812a-293816cba469)
+![image](https://github.com/JuanOfMany/Juans-Packet-Sniffer/assets/101835485/35d1180a-03ba-4afc-b63e-984cf2dc1ff8)
+
 
 I chose to create a simple packet sniffer MVP as my final project in order to better solidify my grasp of C and learn about networking and the internet.
 
@@ -21,8 +22,8 @@ This program is actually useful when run on a server or router (which must be pu
 Using the source IP information along with a geolocation API can allow you to pinpoint new, unwanted, or just strange traffic on your network. This could also be used to check if someone is using a well-documented VPN, which may or may not be indicative of breaking Terms of Service agreements or nefarious activities.
 
 There is a bit more information within the packet and its header that is accessible in commented out code, but I've decided not to include them for the following reasons:
-Payload Data: It is unreadable without decryption, and the header length because it does not provide useful information. I've left printouts commented out in case during further development I choose to expand the scope of the details provided.
-Header Length: Not useful information, as invalid header lengths lead to packets being rejected. 
+* Payload Data: It is unreadable without decryption, and the header length because it does not provide useful information. I've left printouts commented out in case during further development I choose to expand the scope of the details provided.
+* Header Length: Not useful information, as invalid header lengths lead to packets being rejected. 
 
 I used the gtk toolkit to create a simple GUI in C to display this data because it is a free/open source project that met my needs. I have previously made web-apps before and wanted to create a project that isn't another CRUD app.
 I used the libpcap library to leverage the pcap interface in order to capture packets and extract their details.
@@ -36,3 +37,5 @@ I had stretch goals that I wasn't able to meet in time for this submission, but 
   * User input for length of scan in seconds
   * User input for max number of packets to scan for
   * User input for continuous scanning mode
+* Scan different network interfaces (en1, en2, fw0, etc) based on user input.
+* Dark/light mode
