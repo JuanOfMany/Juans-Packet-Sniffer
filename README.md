@@ -17,9 +17,12 @@ The packet data presented includes:
 * Time to Live
 
 The usefulness of this project is dependent on the environment in which it is run. When run on a regular computer it does capture and display packet data, but those packets are being transported from the computer to a router and vice versa. This means that the source and destination IP addresses aren't very useful.
-This program is actually useful when run on a server or router (which must be put into "Monitor Mode") that handles any traffic that you want to monitor. These use cases could allow you to detect DDOS attacks, or unauthorized access to your network that you would otherwise have not known about... unless you use Wireshark, which is a free and open source packet analysis tool that I vaguely was inspired by to make this project. 
+This program is actually useful when run on a server or router (which must be put into "Monitor Mode") that handles any traffic that you want to monitor. These use cases could allow you to detect DDOS attacks, or unauthorized access to your network that you would otherwise have not known about... unless you use Wireshark, which is a free and open source packet analysis tool that I was vaguely inspired by to make this project. 
+Using the source IP information along with a geolocation API can allow you to pinpoint new, unwanted, or just strange traffic on your network. This could also be used to check if someone is using a well-documented VPN, which may or may not be indicative of breaking Terms of Service agreements or nefarious activities.
 
-There is a bit more information within the packet and its header that is accessible in the code, but I've decided not to include the payload data because it is unreadable without decryption, and the header length because it does not provide useful information. I've left printouts commented out in case during further development I choose to expand the scope of the details provided.
+There is a bit more information within the packet and its header that is accessible in commented out code, but I've decided not to include them for the following reasons:
+Payload Data: It is unreadable without decryption, and the header length because it does not provide useful information. I've left printouts commented out in case during further development I choose to expand the scope of the details provided.
+Header Length: Not useful information, as invalid header lengths lead to packets being rejected. 
 
 I used the gtk toolkit to create a simple GUI in C to display this data because it is a free/open source project that met my needs. I have previously made web-apps before and wanted to create a project that isn't another CRUD app.
 I used the libpcap library to leverage the pcap interface in order to capture packets and extract their details.
