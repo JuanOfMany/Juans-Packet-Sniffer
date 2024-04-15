@@ -1,6 +1,8 @@
 # Juans-Packet-Sniffer
 My final project for CS50: a packet sniffer with a GUI coded in C.
 
+Demo video: https://youtu.be/JdUXJbPbu6s
+
 ![image](https://github.com/JuanOfMany/Juans-Packet-Sniffer/assets/101835485/35d1180a-03ba-4afc-b63e-984cf2dc1ff8)
 
 
